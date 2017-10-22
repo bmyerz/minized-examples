@@ -17,7 +17,7 @@
 //See http://forums.xilinx.com/t5/Zynq-All-Programmable-SoC/Bram-parameters-in-Xparameters-h/m-p/555182/highlight/true#M5042
 #undef XPAR_AXI_BRAM_CTRL_0_BASEADDR
 #undef XPAR_AXI_BRAM_CTRL_0_HIGHADDR
-#define XPAR_AXI_BRAM_CTRL_0_BASEADDR 0x40000000  // BM: based on address editor in Vivado
+#define XPAR_AXI_BRAM_CTRL_0_BASEADDR 0x40000000  // based on address editor in Vivado
 #define XPAR_AXI_BRAM_CTRL_0_HIGHADDR 0x40001FFF
 
 #define BRAM_MEMORY XPAR_AXI_BRAM_CTRL_0_BASEADDR
@@ -26,11 +26,11 @@
 #define RESET_LOOP_COUNT	10	// Number of times to check reset is done
 #define LENGTH 4096 // source and destination buffers lengths in number of words
 
-// BM: I'm assuming this means you want to avoid writing over our  program
+// you want to avoid writing over our  program
 // since in the standalone/baremetal mode there is no memory protection
 #define DDR_MEMORY XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x00020000 // pass all code and data sections
 
-// BM: values used by the timer initialization
+// values used by the timer initialization
 #define TIMER_DEVICE_ID	XPAR_SCUTIMER_DEVICE_ID
 // BM: just seems like this is the initial value of the timer
 // but why is it important to be -1 / maxuint?
@@ -39,20 +39,20 @@
 #define DMA0_ID XPAR_XDMAPS_1_DEVICE_ID
 #define INTC_DEVICE_INT_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
 
-// BM: these are two variables used by the interrupt handlers
+// these are two variables used to communicate between the interrupt handlers and main loop
 volatile static int Done = 0;	/* Dma transfer is done */
 volatile static int Error = 0;	/* Dma Bus Error occurs */
 
-// BM: used for stdin in this app
+// used for stdin in this app, instead of, say, scanf library
 XUartPs Uart_PS;		/* Instance of the UART Device */
-// BM: low level device for getting clock ticks (just for timing the transfers)
+// low level device for getting clock ticks (just for timing the transfers)
 XScuTimer Timer;		/* Cortex A9 SCU Private Timer Instance */
 XDmaPs Dma;				/* PS DMA */
 XScuGic Gic;			/* PS GIC */
 
 
-// BM: I guess they decide not to use scanf
-//     however this example is useful! since maybe I can reuse the code for other stuff
+// original author decided to write "scanf" themselves
+//     however this example is useful! maybe reuse this uart code elsewhere!
 int getNumber (){
 
 	u8 byte;
@@ -115,7 +115,7 @@ int getNumber (){
 	}
 }
 
-// BM: interrupt handlers for DMA transfer
+// interrupt handlers for DMA transfer
 void DmaDoneHandler(unsigned int Channel,
 		    XDmaPs_Cmd *DmaCmd,
 		    void *CallbackRef)
@@ -149,7 +149,7 @@ int SetupIntrSystem(XScuGic *GicPtr, XDmaPs *DmaPtr)
 	// for the device occurs, the device driver handler performs the specific
 	// interrupt processing for the device
 
-	// Connect the Fault ISR (BM: Interrupt service routine)
+	// Connect the Fault ISR (Interrupt service routine)
 	Status = XScuGic_Connect(GicPtr,
 				 XPAR_XDMAPS_0_FAULT_INTR,
 				 (Xil_InterruptHandler)XDmaPs_FaultISR,
@@ -172,7 +172,7 @@ int SetupIntrSystem(XScuGic *GicPtr, XDmaPs *DmaPtr)
 	return XST_SUCCESS;
 }
 
-// BM: get the choice of transfer
+// get the choice of transfer
 u8 menu(void)
 {
 	u8 byte;
@@ -186,8 +186,8 @@ u8 menu(void)
 	byte = XUartPs_ReadReg(STDIN_BASEADDRESS,
 						    XUARTPS_FIFO_OFFSET);
 
-	// BM: I changed this so that I could throw out what I think
-		// is a newline can get thrown out
+	// throw out what I think
+        // is a newline
 		while (!XUartPs_IsReceiveData(STDIN_BASEADDRESS));
 		/*ignore return value*/XUartPs_ReadReg(STDIN_BASEADDRESS,
 								    XUARTPS_FIFO_OFFSET);
@@ -196,7 +196,7 @@ u8 menu(void)
 
 }
 
-// BM: get the number of words to transfer
+// get the number of words to transfer
 u8 word_sel(void)
 {
 	u8 choice;
@@ -208,8 +208,7 @@ u8 word_sel(void)
 	choice = XUartPs_ReadReg(STDIN_BASEADDRESS,
 						    XUARTPS_FIFO_OFFSET);
 
-	// BM: I changed this so that I could throw out what I think
-	   		// is a newline can get thrown out
+	// throw out what I think is a newline can get thrown out
 	   		while (!XUartPs_IsReceiveData(STDIN_BASEADDRESS));
 	   		/*ignore return value*/XUartPs_ReadReg(STDIN_BASEADDRESS,
 	   								    XUARTPS_FIFO_OFFSET);
@@ -241,8 +240,8 @@ int main (void) {
 	// PS DMA related definitions
 	XDmaPs_Config *DmaCfg;
 	// BM: What is so special about these particular choices?
-	XDmaPs_Cmd DmaCmd = { // BM: no custom dma program...
-		.ChanCtrl = {  // BM: XDmaPs_ChanCtrl
+	XDmaPs_Cmd DmaCmd = { // ...no custom dma program...
+		.ChanCtrl = {  // type is XDmaPs_ChanCtrl
 			.SrcBurstSize = 4,
 			.SrcBurstLen = 4,
 			.SrcInc = 1,		// increment source address
@@ -372,8 +371,8 @@ int main (void) {
 
    	    select = menu();
 
-   	    // BM: this is interesting that the only difference
-   	    // between the transfer with different types is the memory addresses
+   	    // The only difference
+   	    // between the transfer with different types is the memory addresses!
     	switch(select)
 		{
 			case '1' :
@@ -411,10 +410,10 @@ int main (void) {
 		if(test_done)
 			break;
 
-		// BM: I'm assuming we are making the experiment fair
+		// ...making the experiment fair
 		// want it to be actually from memory not cache
 
-		// BM: Awesome! you can flush the cache
+		// ...Awesome! you can flush the cache
 		// Following code is required only if Cache is enabled
 		Xil_DCacheFlushRange((u32)&source, LENGTH);
 		Xil_DCacheFlushRange((u32)&destination, LENGTH);
@@ -471,7 +470,7 @@ int main (void) {
 		// reset timer
 		XScuTimer_RestartTimer(TimerInstancePtr);
 
-		// BM: wait for DMA to finish
+		// wait for DMA to finish
 		while ((Done==0) & (Error==0));
 		if (Error)
 			print("Error occurred during DMA transfer\r\n");
@@ -485,7 +484,7 @@ int main (void) {
 		// Disable the interrupt for the device
 		XScuGic_Disable(&Gic, XPAR_XDMAPS_0_DONE_INTR_0);
 
-		// BM: double check that the transfer *actually* worked
+		// double check that the transfer *actually* worked
 		for (i = 0; i < num; i++) {
 				if ( destination[i] != source[i]) {
 					xil_printf("Data match failed at = %d, source data = %d, destination data = %d\n\r",i,source[i],destination[i]);
