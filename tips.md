@@ -18,5 +18,7 @@ The following seems to be robust so far. Create a "Run configuration..." where y
 
 ### Stdin/out choices
 
+Make your selection in the board support package (BSP) settings
+
 * coresight: uses the debugging console. I haven't used it enough to know how reliable it is
 * ps7_uart1: uses the serial (COM) port. This has been the most reliable and predictable. If you don't want to use an external terminal program, use the SDK terminal.
