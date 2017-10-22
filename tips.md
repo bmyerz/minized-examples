@@ -4,7 +4,7 @@
 
 ### Extraneous bus interface when packaging IP
 
-When packaging IP, see the clock with a weird symbol (looks like the AXI symbol; I think it means “bus interface”). Just right click and say “remove interface”
+When packaging IP, you might see a signal (such as the clock) with a bus interface symbol (looks like the same as the AXI symbol). Just right click and say “remove interface”
 
 ### Run block automation removes ports I wanted
 
