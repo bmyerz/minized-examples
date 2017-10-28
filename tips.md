@@ -14,6 +14,11 @@ double click the IP core and go find the port
 
 It seems that my IP didn't generate behavioral simulation output products. I haven't figured out how to get it to do that, but instead you could jump ahead to Functional post-synth simulation.
 
+### How do I simulate PS + PL?
+
+As far as I know you cannot. However, I think the most likely path is to use the AXI Verification IP. Send commands to your AXI peripheral.
+https://www.xilinx.com/products/intellectual-property/axi-vip.html
+
 ## SDK
 
 ### How to reset the board without physical access or ability to power cycle the USB port
