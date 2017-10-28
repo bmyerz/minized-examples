@@ -19,6 +19,8 @@ It seems that my IP didn't generate behavioral simulation output products. I hav
 As far as I know you cannot. However, I think the most likely path is to use the AXI Verification IP. Send commands to your AXI peripheral.
 https://www.xilinx.com/products/intellectual-property/axi-vip.html
 
+Or...apparently there is a PS VIP https://www.xilinx.com/video/soc/how-to-use-the-zynq-7000-verification-ip-verify-debug-simulation.html
+
 ## SDK
 
 ### How to reset the board without physical access or ability to power cycle the USB port
