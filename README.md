@@ -16,4 +16,4 @@ At this point, you now understand how to create an HDF in Vivado using the block
 
 3. __Get the PS to talk to PL with your own IP__
 
-At this point, you have worked with an application where the PS talks to the PL, which included an existing AXI peripheral (BRAM). A good next step is to create an application where the software talks to some custom HDL. I adapted this tutorial http://www.fpgadeveloper.com/2014/08/creating-a-custom-ip-block-in-vivado.html. 
+At this point, you have worked with an application where the PS talks to the PL, which included an existing AXI peripheral (BRAM). A good next step is to create an application where the software talks to some custom HDL. I adapted this tutorial http://www.fpgadeveloper.com/2014/08/creating-a-custom-ip-block-in-vivado.html. Find the modifications at https://github.com/bmyerz/minized-examples/tree/master/customip.
