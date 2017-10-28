@@ -4,11 +4,15 @@
 
 ### Extraneous bus interface when packaging IP
 
-When packaging IP, you might see a signal (such as the clock) with a bus interface symbol (looks like the same as the AXI symbol). Just right click and say “remove interface”
+When packaging IP, you might see a signal (such as the clock) with a bus interface symbol. This should be fine. If you don't see it, to mark clk as a clock input, you can go to auto-infer bus interface and find clock_rtl.
 
 ### Run block automation removes ports I wanted
 
 double click the IP core and go find the port
+
+### Behavioral simulation error: NAME not found while processing module instance FILE_INSTANTIATING NAME
+
+It seems that my IP didn't generate behavioral simulation output products. I haven't figured out how to get it to do that, but instead you could jump ahead to Functional post-synth simulation.
 
 ## SDK
 
