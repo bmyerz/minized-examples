@@ -29,6 +29,6 @@ I don't know if this is the best way to do it, but it works for me.
 
 I like to open SDK from within Vivado after exporting hardware. If your SDK project for the HDF already exists, SDK will automatically open your existing application projects. To use the new HDF, right click | refresh on the hardware platform folder. Then right-click your BSP and Re-generate BSP sources.
 
-### Already connected to port COM5
+### Already connected to port COMx
 
 You probably have a second SDK window open with a serial connection.
