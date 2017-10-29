@@ -2,9 +2,13 @@
 
 ## Vivado
 
-### Extraneous bus interface when packaging IP
+### Inferred bus interface when packaging IP
 
 When packaging IP, you might see a signal (such as the clock) with a bus interface symbol. This should be fine. If you don't see it, to mark clk as a clock input, you can go to auto-infer bus interface and find clock_rtl.
+
+### IP Packager Reset active/high low
+
+If you want your IP's reset signal to be marked as active high (helps with IP Integrator automation) then add a Parameter POLARITY with value ACTIVE_HIGH.
 
 ### Run block automation removes ports I wanted
 
