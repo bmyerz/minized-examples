@@ -22,12 +22,6 @@ double click the IP core and go find the port
 
 It seems that my IP didn't generate behavioral simulation output products. I haven't figured out how to get it to do that, but instead you could jump ahead to Functional post-synth simulation.
 
-### How do I simulate PS + PL?
-
-There is a PS VIP https://www.xilinx.com/video/soc/how-to-use-the-zynq-7000-verification-ip-verify-debug-simulation.html
-https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf
-
-- When creating a Testbench that instantiates your block design wrapper module, it may not automatically find that source. You can add simulation source, find that wrapper verilog file, and add it (don't copy)
 
 ## SDK
 
