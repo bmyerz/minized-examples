@@ -14,6 +14,10 @@ If you want your IP's reset signal to be marked as active high (helps with IP In
 
 If your IP is not an AXI peripheral, then you can ignore this. Just make sure when you wire up the IP in your design, that it gets the expected clock signal (I use FCLK_CLK0 by default).
 
+### IP Packager: File Groups: source file is not relative to IP project
+
+Right click on the source file in the sources window and choose "copy into project". The IP Packager's File Groups tab will detect the change.
+
 ### Run block automation removes ports I wanted
 
 double click the IP core and go find the port
