@@ -10,15 +10,15 @@ If you get stuck at a certain point in these steps or the examples, [create a ne
 
 1. __Get started with the board, Vivado, and SDK__
 
-Follow Avnet's MiniZed tutorials 1-3. Find it at http://zedboard.org/support/design/18891/146 (Or go to http://zedboard.org/ then go to Support | Reference designs and tutorials | MiniZed).
+Follow Avnet's [MiniZed tutorials 1-3](http://zedboard.org/support/design/18891/146) (or go to http://zedboard.org/ then go to Support | Reference designs and tutorials | MiniZed).
 
 2. __Get the PS to talk to PL with existing IP__
 
-At this point, you now understand how to create an HDF in Vivado using the block editor and use SDK to create and run applications. Next, get some more interesting PL to talk to the PS. For that, go to https://github.com/bmyerz/minized-examples/tree/master/dma.
+At this point, you now understand how to create an HDF in Vivado using the block editor and use SDK to create and run applications. Next, get some more interesting PL to talk to the PS. Here is an example I adapted where a [C application reads and writes BRAM and issues DMA transfers](https://github.com/bmyerz/minized-examples/tree/master/dma).
 
 3. __Get the PS to talk to PL with your own IP__
 
-At this point, you have worked with an application where the PS talks to the PL, which included an existing AXI peripheral (BRAM). A good next step is to create an application where the software talks to some custom HDL. I adapted this tutorial http://www.fpgadeveloper.com/2014/08/creating-a-custom-ip-block-in-vivado.html. Find the modifications at https://github.com/bmyerz/minized-examples/tree/master/customip.
+At this point, you have worked with an application where the PS talks to the PL, which included an existing AXI peripheral (BRAM). A good next step is to create an application where the software talks to some custom HDL. I adapted [this tutorial]( http://www.fpgadeveloper.com/2014/08/creating-a-custom-ip-block-in-vivado.html). Here are [my modications](https://github.com/bmyerz/minized-examples/tree/master/customip).
 
 Note that this example is quite simple in that the IP is combinational logic only (other than AXI interface). I was able to get it to work the first time on the board without verification in simulation.
 
@@ -26,9 +26,8 @@ Note that this example is quite simple in that the IP is combinational logic onl
 
 Vivado includes a Zynq Verification IP (VIP). Basically, it will let verify your whole block design. In your testbenches you will issue PS commands to emulate what your PS would be doing. 
 
-First, try it out using the Vivado example project (follow the video tutorial:
-https://www.xilinx.com/video/soc/how-to-use-the-zynq-7000-verification-ip-verify-debug-simulation.html).
+First, try it out the Vivado example project by [following this video tutorial](https://www.xilinx.com/video/soc/how-to-use-the-zynq-7000-verification-ip-verify-debug-simulation.html).
 
-Then, you can do it with your own IP. I have an example walkthrough at https://github.com/bmyerz/minized-examples/tree/master/axi_counter.
+Then, you can try the same thing with your own IP. I have an [example walkthrough with a resettable saturating counter](https://github.com/bmyerz/minized-examples/tree/master/axi_counter).
 
-For more information on the Zynq VIP's API, see its documentation: https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf. You'll see that it provides functions for issuing commands like AXI read/write and FPGA soft reset.
+For more information on the Zynq VIP's API, see its [documentation(https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf). 
