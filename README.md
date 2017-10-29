@@ -4,7 +4,9 @@ My goal is to use the Avnet MiniZed for small prototypes of hardware accelerator
 
 The MiniZed is fairly new (as of starting this repository in Oct 2017), so there is still a limited number of targeted tutorials. Fortunately, there are lots of close-enough tutorials for other Zynq boards including older Avnet boards. 
 
-Since the Zynq combines hardware and software development and MiniZed is an introductory board, I figure there must be other mere mortals like myself using it. This documentation is written from that perspective. If you have tips, please contribute!
+Since the Zynq combines hardware and software development and MiniZed is an introductory board, I figure there must be other mere mortals like myself using it. This documentation is written from that perspective. If you have tips, please contribute by issuing a pull request.
+
+If you get stuck at a certain point in these steps or the examples, [create a new issue with the Documentation label](https://github.com/bmyerz/minized-examples/issues/new).
 
 1. __Get started with the board, Vivado, and SDK__
 
