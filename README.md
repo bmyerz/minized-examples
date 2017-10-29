@@ -29,7 +29,6 @@ Vivado includes a Zynq Verification IP (VIP). Basically, it will let verify your
 First, try it out using the Vivado example project (follow the video tutorial:
 https://www.xilinx.com/video/soc/how-to-use-the-zynq-7000-verification-ip-verify-debug-simulation.html).
 
-For more information on the VIP's API, see its documentation: https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf. You'll see that it provides functions for issuing commands like AXI read/write and FPGA soft reset.
+Then, you can do it with your own IP. I have an example walkthrough at https://github.com/bmyerz/minized-examples/tree/master/axi_counter.
 
-After trying the tutorial, you can work with your own peripheral. I suggest trying one that includes sequential logic to make it more interesting.
-
+For more information on the Zynq VIP's API, see its documentation: https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf. You'll see that it provides functions for issuing commands like AXI read/write and FPGA soft reset.
