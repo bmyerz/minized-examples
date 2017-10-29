@@ -22,7 +22,7 @@ At this point, you have worked with an application where the PS talks to the PL,
 
 Note that this example is quite simple in that the IP is combinational logic only (other than AXI interface). I was able to get it to work the first time on the board without verification in simulation.
 
-4. Test the PS + PL in behavioral simulation__
+4. __Test the PS + PL in behavioral simulation__
 
 Vivado includes a Zynq Verification IP (VIP). Basically, it will let verify your whole block design. In your testbenches you will issue PS commands to emulate what your PS would be doing. 
 
