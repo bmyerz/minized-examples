@@ -20,6 +20,10 @@ If you want to see an example of how the ASSOCIATED_BUSIF parameter is set, you 
 
 Right click on the source file in the sources window and choose "copy into project". The IP Packager's File Groups tab will detect the change.
 
+### Where is my custom IP?
+
+Right click in blank space of the block diagram editor | IP Settings | IP | Repository. Navigate to where your IP is. You can verify you got the right location because the pop-up will show that it detected an IP.
+
 ### Run block automation removes ports I wanted
 
 double click the IP core and go find the port
