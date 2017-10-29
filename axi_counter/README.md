@@ -11,9 +11,6 @@ Our AXI peripheral IP for this example is a user-resettable saturating counter. 
 * slv_reg0: write 0x000000001 to assert user_reset, write 0x00000000 to de-assert user_reset
 * slv_reg1: read to get the counter's value
 
-You can look at this one for the edits.
-https://github.com/bmyerz/minized-examples/blob/master/axi_counter/axi_counter_ip_sources/Counter_v1_0_S00_AXI.v
-
 See lines to edit:
 
 https://github.com/bmyerz/minized-examples/blob/71babf5fec09c134f7f5f251685b97ca94e831db/axi_counter/axi_counter_ip_sources/Counter_v1_0_S00_AXI.v#L374
