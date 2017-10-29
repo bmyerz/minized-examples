@@ -1,3 +1,6 @@
+Information
+---------
+
 In this example, we'll create an AXI peripheral IP, test in behavioral simulation everything except the AXI interface, then use it in a Zynq PS block design and test the system in behavioral.
 
 Our AXI peripheral IP for this example is a user-resettable saturating counter. I picked this component because it is a simple sequential logic circuit that will provide both read and write interaction over AXI.
