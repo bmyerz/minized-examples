@@ -25,6 +25,9 @@ https://github.com/bmyerz/minized-examples/blob/71babf5fec09c134f7f5f251685b97ca
 
 7. Add a simulation source. You can use this file https://github.com/bmyerz/minized-examples/blob/master/axi_counter/block_design_sources/tb.v. The testbench [issues a FPGA reset](https://github.com/bmyerz/minized-examples/blob/2bb6fc6a8dbd9806e405e38b4eb6df97918b1a9d/axi_counter/block_design_sources/tb.v#L48), then [reads the counter a couple times](https://github.com/bmyerz/minized-examples/blob/2bb6fc6a8dbd9806e405e38b4eb6df97918b1a9d/axi_counter/block_design_sources/tb.v#L53), then [does a user reset on the counter](https://github.com/bmyerz/minized-examples/blob/2bb6fc6a8dbd9806e405e38b4eb6df97918b1a9d/axi_counter/block_design_sources/tb.v#L72), then [reads it one more time](https://github.com/bmyerz/minized-examples/blob/2bb6fc6a8dbd9806e405e38b4eb6df97918b1a9d/axi_counter/block_design_sources/tb.v#L80).
 
+For information on these commands, take a look at the [Zynq VIP documentation](https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf).
+
+
 8. Run behavioral simulation. The output looks something like the following (make sure you run it until completion).
 
 ```
