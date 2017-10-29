@@ -19,11 +19,13 @@ https://github.com/bmyerz/minized-examples/blob/71babf5fec09c134f7f5f251685b97ca
 
 4. Package the IP and close the Project
 
-5. Create a new project. The block design should include Zynq PS. To add our Counter IP, right-click within the block diagram editor | IP Settings | IP | repositories. Navigate to the location of your IP. The default seems to be a folder inside of ip_repo/. Run connection automation. 
+5. Create a new project. The block design should include Zynq PS. To add our Counter IP, right-click within the block diagram editor | IP Settings | IP | repositories. Navigate to the location of your IP. The default seems to be a folder inside of ip_repo/. Now when you click Add IP, you'll be able to see your Counter IP. 
 
-6. Add a simulation source. You can use this file https://github.com/bmyerz/minized-examples/blob/master/axi_counter/block_design_sources/tb.v. The testbench issues a FPGA reset, then reads the counter a couple times, then does a user reset on the counter, then reads it one more time.
+6. Run connection automation. 
 
-7. Run behavioral simulation. The output looks something like the following (make sure you run it until completion).
+7. Add a simulation source. You can use this file https://github.com/bmyerz/minized-examples/blob/master/axi_counter/block_design_sources/tb.v. The testbench issues a FPGA reset, then reads the counter a couple times, then does a user reset on the counter, then reads it one more time.
+
+8. Run behavioral simulation. The output looks something like the following (make sure you run it until completion).
 
 ```
 XilinxAXIVIP: Found at Path: tb.zynq_sys.zynq_counter_i.processing_system7_0.inst.M_AXI_GP0.master
@@ -63,3 +65,7 @@ User resets the counter to 0
              3590000, running the testbench, data read from Counter was 32'h0000000e
 $finish called at time : 3590 ns : File "C:/Users/bdmyers/ZynqWithSaturatingCounter/ZynqWithSaturatingCounter.srcs/sim_1/new/tb.v" Line 88
 ```
+
+9. From here you can Generate a bitstream and try it on the board with SDK.
+
+TODO: add source for counter C code.
