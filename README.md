@@ -30,4 +30,4 @@ First, try it out the Vivado example project by [following this video tutorial](
 
 Then, you can try the same thing with your own IP. I have an [example walkthrough with a resettable saturating counter](https://github.com/bmyerz/minized-examples/tree/master/axi_counter).
 
-For more information on the Zynq VIP's API, see its [documentation(https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf). 
+For more information on the Zynq VIP's API, see its [documentation](https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf). 
