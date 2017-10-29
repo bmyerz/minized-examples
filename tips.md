@@ -43,8 +43,8 @@ The following seems to be robust so far. Create a "Run configuration..." where y
 
 Make your selection in the board support package (BSP) settings
 
-* coresight: uses the debugging console. I haven't used it enough to know how reliable it is
-* ps7_uart1: uses the serial (COM) port. This has been the most reliable and predictable. If you don't want to use an external terminal program, use the SDK terminal.
+* coresight: uses the debugging console. It appears to work fine for stdout; I haven't yet tried it for stdin.
+* ps7_uart1: uses the serial (COM) port. I like that it is less magical than coresight, since serial is such a common interface. If you don't want to use an external terminal program, use the "SDK terminal".
 
 ### Reflect changes when you modify the HDF
 
