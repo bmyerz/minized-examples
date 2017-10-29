@@ -22,7 +22,7 @@ Right click on the source file in the sources window and choose "copy into proje
 
 ### Where is my custom IP?
 
-Right click in blank space of the block diagram editor | IP Settings | IP | Repository. Navigate to where your IP is. You can verify you got the right location because the pop-up will show that it detected an IP.
+Right click in blank space of the block diagram editor | IP Settings | IP | Repository. Navigate to where your IP is. You can verify you got the right location because the pop-up (title is "Add repository") will show that it detected an IP.
 
 ### Run block automation removes ports I wanted
 
