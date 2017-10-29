@@ -10,6 +10,10 @@ When packaging IP, you might see a signal (such as the clock) with a bus interfa
 
 If you want your IP's reset signal to be marked as active high (helps with IP Integrator automation) then add a Parameter POLARITY with value ACTIVE_HIGH.
 
+### IP Packager: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+
+If your IP is not an AXI peripheral, then you can ignore this. Just make sure when you wire up the IP in your design, that it gets the expected clock signal (I use FCLK_CLK0 by default).
+
 ### Run block automation removes ports I wanted
 
 double click the IP core and go find the port
