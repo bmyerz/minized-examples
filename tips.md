@@ -6,9 +6,11 @@
 
 When packaging IP, you might see a signal (such as the clock) with a bus interface symbol. This should be fine. If you don't see it, to mark clk as a clock input, you can go to auto-infer bus interface and find clock_rtl.
 
-### IP Packager Reset active/high low
+### IP Packager: Reset signal with active high
 
-If you want your IP's reset signal to be marked as active high (helps with IP Integrator automation) then add a Parameter POLARITY with value ACTIVE_HIGH.
+If your IP's reset signal is active high, and you want it to work well with Run Connection Automation (as in, get wired up to an active high reset signal), you'll need to mark it as such. In the IP Packager, add a Parameter called POLARITY with value ACTIVE_HIGH. Note that the default is ACTIVE_LOW, so if your reset is active low, then don't do anything.
+
+You can check that this paramter worked by adding the IP to your block design and clicking Run Connection Automation. You should see your reset connected to `peripherial_reset` instead of `peripheral_areset`.
 
 ### IP Packager: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
 
