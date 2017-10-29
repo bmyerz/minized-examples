@@ -14,6 +14,8 @@ If you want your IP's reset signal to be marked as active high (helps with IP In
 
 If your IP is not an AXI peripheral, then you can ignore this. Just make sure when you wire up the IP in your design, that it gets the expected clock signal (I use FCLK_CLK0 by default).
 
+If you want to see an example of how the ASSOCIATED_BUSIF parameter is set, you can create a new AXI4 Peripheral IP, then go to the IP packager, right click on clock or reset, IP Settings, Parameters.
+
 ### IP Packager: File Groups: source file is not relative to IP project
 
 Right click on the source file in the sources window and choose "copy into project". The IP Packager's File Groups tab will detect the change.
