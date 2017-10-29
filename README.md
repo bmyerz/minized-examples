@@ -26,7 +26,7 @@ Note that this example is quite simple in that the IP is combinational logic onl
 
 Vivado includes a Zynq Verification IP (VIP). Basically, it will let verify your whole block design. In your testbenches you will issue PS commands to emulate what your PS would be doing. 
 
-First, try it out the Vivado example project by [following this video tutorial](https://www.xilinx.com/video/soc/how-to-use-the-zynq-7000-verification-ip-verify-debug-simulation.html).
+First, try out the Vivado example project by [following this video tutorial](https://www.xilinx.com/video/soc/how-to-use-the-zynq-7000-verification-ip-verify-debug-simulation.html).
 
 Then, you can try the same thing with your own IP. I have an [example walkthrough with a resettable saturating counter](https://github.com/bmyerz/minized-examples/tree/master/axi_counter).
 
