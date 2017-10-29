@@ -8,7 +8,7 @@ module Counter #(parameter WIDTH=32) (
     );
     
     
-    // with a 50MHz clock, should take about 85 seconds to saturate
+    // with a 50MHz clock, 32 bits should take about 85 seconds to saturate
     always @(posedge clk) begin
         if (areset == 1'b0) dataout <= {WIDTH{1'b0}};
         else if (user_reset == 1'b1) dataout <= {WIDTH{1'b0}};
