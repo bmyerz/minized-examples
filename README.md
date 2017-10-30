@@ -30,4 +30,6 @@ First, try out the Vivado example project by [following this video tutorial](htt
 
 Then, you can try the same thing with your own IP. I have an [example walkthrough with a resettable saturating counter](https://github.com/bmyerz/minized-examples/tree/master/axi_counter).
 
+Another option to learn: when you create a new AXI4 peripheral, there as an option to "Verify with AXI VIP". This will create an example testbench for a AXI peripheral. I haven't edited the user logic yet.
+
 For more information on the Zynq VIP's API, see its [documentation](https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf). 
