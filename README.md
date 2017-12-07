@@ -33,3 +33,9 @@ Then, you can try the same thing with your own IP. I have an [example walkthroug
 Another option to learn: when you create a new AXI4 peripheral, there as an option to "Verify with AXI VIP". This will create an example testbench for a AXI peripheral. I haven't edited the user logic yet.
 
 For more information on the Zynq VIP's API, see its [documentation](https://www.xilinx.com/support/documentation/ip_documentation/processing_system7_vip/v1_0/ds940-zynq-vip.pdf). 
+
+
+# Switched to Zybo-Z7 10
+
+Here's a VGA pmod demo that besides demonstrating use of pmods also demonstrates using only the PL (so no SDK involvement)
+https://reference.digilentinc.com/learn/programmable-logic/tutorials/zybo-z7-pmod-vga-demo/start
