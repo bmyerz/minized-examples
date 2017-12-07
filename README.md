@@ -39,3 +39,7 @@ For more information on the Zynq VIP's API, see its [documentation](https://www.
 
 Here's a VGA pmod demo that besides demonstrating use of pmods also demonstrates using only the PL (so no SDK involvement)
 https://reference.digilentinc.com/learn/programmable-logic/tutorials/zybo-z7-pmod-vga-demo/start
+
+PMOD IPs tutorial
+https://reference.digilentinc.com/learn/programmable-logic/tutorials/pmod-ips/start
+ - note that there is no PMOD VGA IP currently, but there is an rgb to VGA IP, so could make a VGAPMOD ip to connect it to
