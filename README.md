@@ -39,7 +39,7 @@ For more information on the Zynq VIP's API, see its [documentation](https://www.
 
 Here's a VGA pmod demo that besides demonstrating use of pmods also demonstrates using only the PL (so no SDK involvement)
 https://reference.digilentinc.com/learn/programmable-logic/tutorials/zybo-z7-pmod-vga-demo/start
-- TODO, make it work with block design and PS, use Digilent rgb2vga and create a pmod controller ip
+- TODO, make it work with block design and PS, use Digilent rgb2vga and create a pmod controller ip. Does digilent have IP packager Interface definitions? Or start with source for some PMOD ip, https://github.com/Digilent/vivado-library/tree/master/ip/Pmods
 
 PMOD IPs tutorial
 https://reference.digilentinc.com/learn/programmable-logic/tutorials/pmod-ips/start
