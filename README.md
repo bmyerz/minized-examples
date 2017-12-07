@@ -43,3 +43,8 @@ https://reference.digilentinc.com/learn/programmable-logic/tutorials/zybo-z7-pmo
 PMOD IPs tutorial
 https://reference.digilentinc.com/learn/programmable-logic/tutorials/pmod-ips/start
  - note that there is no PMOD VGA IP currently, but there is an rgb to VGA IP, so could make a PMOD vga ip to connect it to
+ 
+ Easy connection of IOs, using the board tab. Can infer information from 
+ https://reference.digilentinc.com/learn/programmable-logic/tutorials/pmod-ips/start
+
+
