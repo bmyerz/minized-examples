@@ -43,6 +43,8 @@ https://reference.digilentinc.com/learn/programmable-logic/tutorials/zybo-z7-pmo
 - Under settings | IP | repositories, you can also import interfaces, not just ip. So I imported the contents of Digilent's directory here https://github.com/Digilent/vivado-library/tree/master/if 
 - Use pinout in https://reference.digilentinc.com/reference/programmable-logic/zybo/reference-manual
 - and lazily use the https://github.com/Digilent/Zybo-Z7-10-Pmod-VGA/blob/master/src/constraints/Zybo-Z7-Master.xdc to see which PMOD ports the VGA ports are connected to
+- copy the clock configuration from https://reference.digilentinc.com/learn/programmable-logic/tutorials/zybo-z7-pmod-vga-demo/start
+   - (just pick requested frequency, and turn off optional outputs reset and locked)
 
 PMOD IPs tutorial
 https://reference.digilentinc.com/learn/programmable-logic/tutorials/pmod-ips/start
