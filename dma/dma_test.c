@@ -12,14 +12,6 @@
 #include "xil_exception.h"	// if interrupt is used
 #include "xil_printf.h"
 
-//These BRAM parameters are currently set incorrectly in SDK 2014.4 xparameters.h
-//This is a known bug that is scheduled to be fixed in 2015.1
-//See http://forums.xilinx.com/t5/Zynq-All-Programmable-SoC/Bram-parameters-in-Xparameters-h/m-p/555182/highlight/true#M5042
-#undef XPAR_AXI_BRAM_CTRL_0_BASEADDR
-#undef XPAR_AXI_BRAM_CTRL_0_HIGHADDR
-#define XPAR_AXI_BRAM_CTRL_0_BASEADDR 0x40000000  // based on address editor in Vivado
-#define XPAR_AXI_BRAM_CTRL_0_HIGHADDR 0x40001FFF
-
 #define BRAM_MEMORY XPAR_AXI_BRAM_CTRL_0_BASEADDR
 #define BRAM_MEMORY_LAST_WORD (XPAR_AXI_BRAM_CTRL_0_HIGHADDR-3)
 
