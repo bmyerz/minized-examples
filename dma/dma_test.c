@@ -12,8 +12,8 @@
 #include "xil_exception.h"	// if interrupt is used
 #include "xil_printf.h"
 
-#define BRAM_MEMORY XPAR_AXI_BRAM_CTRL_0_BASEADDR
-#define BRAM_MEMORY_LAST_WORD (XPAR_AXI_BRAM_CTRL_0_HIGHADDR-3)
+#define BRAM_MEMORY XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR
+#define BRAM_MEMORY_LAST_WORD (XPAR_AXI_BRAM_CTRL_0_S_AXI_HIGHADDR-3)
 
 #define RESET_LOOP_COUNT	10	// Number of times to check reset is done
 #define LENGTH 4096 // source and destination buffers lengths in number of words
